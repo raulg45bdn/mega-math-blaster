@@ -1,3 +1,7 @@
+import { PhoneMode } from '../systems/Device';
+
+export type { PhoneMode };
+
 /** Curriculum subjects exactly as the 1996 console listed them. */
 export type Subject =
   | 'addition'
@@ -96,6 +100,8 @@ export interface Profile {
   soundEnabled: boolean;
   introSeen: boolean;
   generatorCharge: number;
+  /** 'auto' follows device detection; 'on'/'off' are the player's explicit choice. */
+  phoneMode: PhoneMode;
 }
 
 export const MISSION_ORDER: MissionKey[] = ['spaceZapper1', 'mathBlaster', 'caveRunner', 'equationator', 'spaceZapper2'];

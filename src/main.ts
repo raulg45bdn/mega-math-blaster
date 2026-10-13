@@ -11,6 +11,7 @@ import { EquationatorScene } from './scenes/EquationatorScene';
 import { CityRunnerScene } from './scenes/CityRunnerScene';
 import { EndingScene } from './scenes/EndingScene';
 import { ParentTeacherScene } from './scenes/ParentTeacherScene';
+import { installPhoneUi } from './systems/PhoneUi';
 
 export const GAME_WIDTH = 1024;
 export const GAME_HEIGHT = 768;
@@ -40,6 +41,7 @@ const config: Phaser.Types.Core.GameConfig = {
 };
 
 function launch(): void {
+  installPhoneUi();
   const game = new Phaser.Game(config);
   // Exposed for automated smoke tests and debugging in the browser console.
   (window as Window & { megaMathBlaster?: Phaser.Game }).megaMathBlaster = game;

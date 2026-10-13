@@ -26,7 +26,8 @@ export function defaultProfile(): Profile {
     musicEnabled: true,
     soundEnabled: true,
     introSeen: false,
-    generatorCharge: 0
+    generatorCharge: 0,
+    phoneMode: 'auto'
   };
 }
 
@@ -50,6 +51,7 @@ function sanitize(raw: unknown): Profile {
   p.musicEnabled = bool(o.musicEnabled, true);
   p.soundEnabled = bool(o.soundEnabled, true);
   p.introSeen = bool(o.introSeen, false);
+  if (o.phoneMode === 'auto' || o.phoneMode === 'on' || o.phoneMode === 'off') p.phoneMode = o.phoneMode;
   if (o.crystals && typeof o.crystals === 'object') {
     const c = o.crystals as Record<string, unknown>;
     (['blue', 'red', 'green'] as CrystalKey[]).forEach((k) => {

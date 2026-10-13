@@ -5,6 +5,7 @@ import { soundManager } from '../audio/SoundSynthesizer';
 import { music } from '../audio/MusicPlayer';
 import { narrator } from '../systems/Narrator';
 import { Progress } from '../systems/Progress';
+import { setPhoneModeSetting } from '../systems/Device';
 
 interface ManifestEntry {
   key: string;
@@ -78,6 +79,7 @@ export class BootScene extends Phaser.Scene {
     this.registerAnimations();
 
     const profile = Progress.load();
+    setPhoneModeSetting(profile.phoneMode);
     soundManager.enabled = profile.soundEnabled;
     music.enabled = profile.musicEnabled;
     narrator.enabled = profile.voiceEnabled;

@@ -6,6 +6,7 @@ import { LevelDef, TILE, Zone } from '../content/Levels';
 import { GateProblem } from '../types';
 import { generateGate } from '../content/Curriculum';
 import { soundManager } from '../audio/SoundSynthesizer';
+import { phoneMode } from '../systems/Device';
 
 export interface Troll {
   sprite: Phaser.Types.Physics.Arcade.SpriteWithDynamicBody;
@@ -303,7 +304,12 @@ export abstract class PlatformerBase extends ActivityBase {
       };
     }
     this.buildTouchControls(width, height);
-    const hint = this.add.text(width / 2, 112, 'KEYS:  arrows or W A S D move   -   SPACE jumps   -   F throws        (or hold the round buttons with the mouse)', textStyle(15, '#ffffff', { stroke: '#1b1533', strokeThickness: 3 })).setOrigin(0.5).setScrollFactor(0).setDepth(900);
+    // Sits below the score scroll so the two never overlap, and says nothing
+    // about keys when the player is on a touch screen.
+    const hintText = phoneMode()
+      ? 'Hold the round buttons to move, jump and throw'
+      : 'KEYS:  arrows or W A S D move   -   SPACE jumps   -   F throws';
+    const hint = this.add.text(width / 2 + 90, 48, hintText, textStyle(15, '#ffffff', { stroke: '#1b1533', strokeThickness: 3 })).setOrigin(0.5).setScrollFactor(0).setDepth(900);
     this.tweens.add({ targets: hint, alpha: 0, delay: 9000, duration: 800 });
     this.input.on('pointerdown', (p: Phaser.Input.Pointer) => {
       if (p.y < height - 130 && p.x > 260 && p.x < width - 260) this.touchThrow = true;
@@ -314,17 +320,25 @@ export abstract class PlatformerBase extends ActivityBase {
   }
 
   private buildTouchControls(width: number, height: number): void {
+    // The canvas is scaled down to fit a phone screen, so these pads are drawn
+    // oversized in phone mode to stay a comfortable fingertip size once scaled.
+    const phone = phoneMode();
+    const radius = phone ? 70 : 46;
+    const edge = phone ? 92 : 70;
+    const gap = phone ? 166 : 110;
+    const y = height - (phone ? 84 : 64);
     const make = (x: number, label: string, onDown: () => void, onUp: () => void): void => {
-      const circle = this.add.circle(x, height - 64, 46, 0x1b1533, 0.55).setStrokeStyle(4, 0xffcc33, 0.8).setScrollFactor(0).setDepth(950).setInteractive();
-      this.add.text(x, height - 64, label, textStyle(28, '#ffffff')).setOrigin(0.5).setScrollFactor(0).setDepth(951);
+      const circle = this.add.circle(x, y, radius, 0x1b1533, 0.55).setStrokeStyle(4, 0xffcc33, 0.8).setScrollFactor(0).setDepth(950).setInteractive();
+      this.add.text(x, y, label, textStyle(phone ? 40 : 28, '#ffffff')).setOrigin(0.5).setScrollFactor(0).setDepth(951);
       circle.on('pointerdown', onDown);
       circle.on('pointerup', onUp);
       circle.on('pointerout', onUp);
+      circle.on('pointerupoutside', onUp);
     };
-    make(70, '◀', () => (this.touchLeft = true), () => (this.touchLeft = false));
-    make(180, '▶', () => (this.touchRight = true), () => (this.touchRight = false));
-    make(width - 70, '▲', () => (this.touchJump = true), () => (this.touchJump = false));
-    make(width - 180, '✦', () => (this.touchThrow = true), () => (this.touchThrow = false));
+    make(edge, '◀', () => (this.touchLeft = true), () => (this.touchLeft = false));
+    make(edge + gap, '▶', () => (this.touchRight = true), () => (this.touchRight = false));
+    make(width - edge, '▲', () => (this.touchJump = true), () => (this.touchJump = false));
+    make(width - edge - gap, '✦', () => (this.touchThrow = true), () => (this.touchThrow = false));
   }
 
   // --------------------------------------------------------------- hooks

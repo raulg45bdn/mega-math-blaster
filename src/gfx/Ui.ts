@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { K } from './Keys';
 import { soundManager } from '../audio/SoundSynthesizer';
+import { phoneMode } from '../systems/Device';
 
 export const FONT = '"Arial Black", "Arial Rounded MT Bold", Arial, Helvetica, sans-serif';
 export const FONT_BODY = '"Trebuchet MS", "Segoe UI", Arial, sans-serif';
@@ -84,8 +85,12 @@ export function machineButton(scene: Phaser.Scene, x: number, y: number, label: 
 }
 
 /** Small text link styled like the scroll's MATH TIPS / OPTIONS entries. */
-export function scrollLink(scene: Phaser.Scene, x: number, y: number, label: string, onClick: () => void): Phaser.GameObjects.Text {
-  const t = scene.add.text(x, y, label, textStyle(15, '#4a2c0a')).setOrigin(0.5).setInteractive({ useHandCursor: true });
+export function scrollLink(scene: Phaser.Scene, x: number, y: number, label: string, onClick: () => void, fontSize: number = 15): Phaser.GameObjects.Text {
+  const t = scene.add.text(x, y, label, textStyle(fontSize, '#4a2c0a')).setOrigin(0.5).setInteractive({ useHandCursor: true });
+  // Pad the hit box well past the glyphs so a fingertip can land on it.
+  const padX = fontSize > 15 ? 34 : 14;
+  const padY = fontSize > 15 ? 14 : 6;
+  t.input!.hitArea = new Phaser.Geom.Rectangle(-padX, -padY, t.width + padX * 2, t.height + padY * 2);
   t.on('pointerover', () => t.setColor('#b8500a'));
   t.on('pointerout', () => t.setColor('#4a2c0a'));
   t.on('pointerdown', () => {
@@ -139,8 +144,13 @@ export function scrollHud(scene: Phaser.Scene, x: number, y: number, onTips: () 
   const timeLabel = scene.add.text(110, 92, 'TIME', textStyle(15, ink)).setOrigin(0.5);
   const timeValue = scene.add.text(110, 116, '0:00', textStyle(24, ink)).setOrigin(0.5);
   const extra = scene.add.text(110, 140, '', textStyle(14, '#1f8a3b')).setOrigin(0.5);
-  const tips = scrollLink(scene, 110, 160, 'MATH TIPS', onTips);
-  const options = scrollLink(scene, 110, 180, 'OPTIONS', onOptions);
+  // On a phone these two are the only small controls on screen, so they get
+  // bigger text and a generous invisible hit box instead of a text-sized one.
+  const phone = phoneMode();
+  const tipsY = phone ? 158 : 160;
+  const optionsY = phone ? 186 : 180;
+  const tips = scrollLink(scene, 110, tipsY, 'MATH TIPS', onTips, phone ? 19 : 15);
+  const options = scrollLink(scene, 110, optionsY, 'OPTIONS', onOptions, phone ? 19 : 15);
   container.add([img, scoreLabel, scoreValue, timeLabel, timeValue, extra, tips, options]);
   return {
     container,

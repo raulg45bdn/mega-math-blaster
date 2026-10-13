@@ -5,6 +5,7 @@ import { music } from '../audio/MusicPlayer';
 import { soundManager } from '../audio/SoundSynthesizer';
 import { narrator } from '../systems/Narrator';
 import { Progress } from '../systems/Progress';
+import { detectedAsPhone, PhoneMode, setPhoneModeSetting } from '../systems/Device';
 
 export class TitleScene extends Phaser.Scene {
   constructor() {
@@ -52,6 +53,7 @@ export class TitleScene extends Phaser.Scene {
     menuButton(this, bx, 520, 'SUBJECT CONSOLE', () => fadeTo(this, SCENE.CONSOLE), 'purple', 20);
     menuButton(this, bx, 600, 'PARENT / TEACHER', () => fadeTo(this, SCENE.PARENT), 'gold', 20);
 
+    this.createPhoneToggle(186, height - 96);
     outlinedText(this, width / 2, height - 44, 'A fan recreation of the 1996 Davidson classic. Original art and code.', 16, '#c9b6ff', 3);
     this.add.text(width - 20, 20, `Stars: ${profile.score}   Bonus treasures: ${profile.bestBonus}`, textStyle(16, '#ffcc33', { stroke: '#1b1533', strokeThickness: 3 })).setOrigin(1, 0);
 
@@ -65,5 +67,29 @@ export class TitleScene extends Phaser.Scene {
         }
       });
     }
+  }
+
+  /**
+   * Cycles auto / on / off. Auto follows device detection, which suits almost
+   * everyone; the explicit settings cover a small tablet that reads as a
+   * desktop, or a phone someone would rather play with a keyboard.
+   */
+  private createPhoneToggle(x: number, y: number): void {
+    const order: PhoneMode[] = ['auto', 'on', 'off'];
+    const describe = (mode: PhoneMode): string => {
+      if (mode === 'on') return 'BIG TOUCH CONTROLS: ON';
+      if (mode === 'off') return 'BIG TOUCH CONTROLS: OFF';
+      return 'BIG TOUCH CONTROLS: AUTO (' + (detectedAsPhone() ? 'ON' : 'OFF') + ')';
+    };
+    const btn = menuButton(this, x, y, describe(Progress.load().phoneMode), () => {
+      const next = order[(order.indexOf(Progress.load().phoneMode) + 1) % order.length];
+      Progress.update((p) => {
+        p.phoneMode = next;
+      });
+      setPhoneModeSetting(next);
+      // Rebuild so every control is laid out at the new size.
+      this.scene.restart();
+    }, 'purple', 13, 0.78);
+    btn.container.setDepth(40);
   }
 }
