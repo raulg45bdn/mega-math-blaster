@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Mega Math Blaster remake: a faithful fan recreation of the 1996 Davidson edutainment classic" />
+  <title>Mega Math Blaster Remake</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+    }
+    html, body {
+      background-color: #0b0c16;
+      color: #e2e8f0;
+      font-family: 'Courier New', Courier, monospace;
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      touch-action: none;
+    }
+    #game-container {
+      position: relative;
+      width: 1024px;
+      height: 768px;
+      max-width: 98vw;
+      max-height: 98vh;
+      aspect-ratio: 4 / 3;
+      box-shadow: 0 0 30px rgba(56, 189, 248, 0.3), 0 0 10px rgba(168, 85, 247, 0.2);
+      border: 3px solid #38bdf8;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+    }
+    #game-container canvas {
+      image-rendering: auto;
+      image-rendering: auto;
+    }
+    #game-container::after {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+      background-size: 100% 4px;
+      z-index: 10;
+      pointer-events: none;
+      opacity: 0.35;
+    }
+    noscript {
+      display: block;
+      padding: 24px;
+      text-align: center;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div id="game-container"></div>
+  <noscript>Mega Math Blaster needs JavaScript enabled to launch the mission.</noscript>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

@@ -1,0 +1,705 @@
+{
+  "generated": "2026-10-13T22:06:35.425Z",
+  "assets": [
+    {
+      "key": "blasternaut_stand",
+      "file": "blasternaut_stand.svg",
+      "group": "characters",
+      "width": 80,
+      "height": 120
+    },
+    {
+      "key": "blasternaut_walk_0",
+      "file": "blasternaut_walk_0.svg",
+      "group": "characters",
+      "width": 80,
+      "height": 120
+    },
+    {
+      "key": "blasternaut_walk_1",
+      "file": "blasternaut_walk_1.svg",
+      "group": "characters",
+      "width": 80,
+      "height": 120
+    },
+    {
+      "key": "blasternaut_walk_2",
+      "file": "blasternaut_walk_2.svg",
+      "group": "characters",
+      "width": 80,
+      "height": 120
+    },
+    {
+      "key": "blasternaut_walk_3",
+      "file": "blasternaut_walk_3.svg",
+      "group": "characters",
+      "width": 80,
+      "height": 120
+    },
+    {
+      "key": "blasternaut_jump",
+      "file": "blasternaut_jump.svg",
+      "group": "characters",
+      "width": 80,
+      "height": 120
+    },
+    {
+      "key": "blasternaut_jet",
+      "file": "blasternaut_jet.svg",
+      "group": "characters",
+      "width": 80,
+      "height": 120
+    },
+    {
+      "key": "blasternaut_throw",
+      "file": "blasternaut_throw.svg",
+      "group": "characters",
+      "width": 80,
+      "height": 120
+    },
+    {
+      "key": "blasternaut_hurt",
+      "file": "blasternaut_hurt.svg",
+      "group": "characters",
+      "width": 80,
+      "height": 120
+    },
+    {
+      "key": "blasternaut_portrait",
+      "file": "blasternaut_portrait.svg",
+      "group": "characters",
+      "width": 140,
+      "height": 140
+    },
+    {
+      "key": "gc_smile",
+      "file": "gc_smile.svg",
+      "group": "characters",
+      "width": 160,
+      "height": 160
+    },
+    {
+      "key": "gc_talk",
+      "file": "gc_talk.svg",
+      "group": "characters",
+      "width": 160,
+      "height": 160
+    },
+    {
+      "key": "gc_worried",
+      "file": "gc_worried.svg",
+      "group": "characters",
+      "width": 160,
+      "height": 160
+    },
+    {
+      "key": "gc_full",
+      "file": "gc_full.svg",
+      "group": "characters",
+      "width": 140,
+      "height": 300
+    },
+    {
+      "key": "gc_full_talk",
+      "file": "gc_full_talk.svg",
+      "group": "characters",
+      "width": 140,
+      "height": 300
+    },
+    {
+      "key": "spot_happy",
+      "file": "spot_happy.svg",
+      "group": "characters",
+      "width": 70,
+      "height": 70
+    },
+    {
+      "key": "spot_scared",
+      "file": "spot_scared.svg",
+      "group": "characters",
+      "width": 70,
+      "height": 70
+    },
+    {
+      "key": "gelator_grin",
+      "file": "gelator_grin.svg",
+      "group": "characters",
+      "width": 180,
+      "height": 180
+    },
+    {
+      "key": "gelator_angry",
+      "file": "gelator_angry.svg",
+      "group": "characters",
+      "width": 180,
+      "height": 180
+    },
+    {
+      "key": "freud",
+      "file": "freud.svg",
+      "group": "characters",
+      "width": 110,
+      "height": 80
+    },
+    {
+      "key": "foot_troll_0",
+      "file": "foot_troll_0.svg",
+      "group": "creatures",
+      "width": 90,
+      "height": 90
+    },
+    {
+      "key": "foot_troll_1",
+      "file": "foot_troll_1.svg",
+      "group": "creatures",
+      "width": 90,
+      "height": 90
+    },
+    {
+      "key": "nose_troll_0",
+      "file": "nose_troll_0.svg",
+      "group": "creatures",
+      "width": 90,
+      "height": 90
+    },
+    {
+      "key": "nose_troll_1",
+      "file": "nose_troll_1.svg",
+      "group": "creatures",
+      "width": 90,
+      "height": 90
+    },
+    {
+      "key": "kissing_troll_0",
+      "file": "kissing_troll_0.svg",
+      "group": "creatures",
+      "width": 90,
+      "height": 90
+    },
+    {
+      "key": "kissing_troll_1",
+      "file": "kissing_troll_1.svg",
+      "group": "creatures",
+      "width": 90,
+      "height": 90
+    },
+    {
+      "key": "drone",
+      "file": "drone.svg",
+      "group": "creatures",
+      "width": 120,
+      "height": 70
+    },
+    {
+      "key": "goo_drop",
+      "file": "goo_drop.svg",
+      "group": "creatures",
+      "width": 30,
+      "height": 40
+    },
+    {
+      "key": "asteroid_0",
+      "file": "asteroid_0.svg",
+      "group": "props",
+      "width": 100,
+      "height": 100
+    },
+    {
+      "key": "asteroid_1",
+      "file": "asteroid_1.svg",
+      "group": "props",
+      "width": 100,
+      "height": 100
+    },
+    {
+      "key": "asteroid_2",
+      "file": "asteroid_2.svg",
+      "group": "props",
+      "width": 100,
+      "height": 100
+    },
+    {
+      "key": "satellite",
+      "file": "satellite.svg",
+      "group": "props",
+      "width": 110,
+      "height": 70
+    },
+    {
+      "key": "space_mine",
+      "file": "space_mine.svg",
+      "group": "props",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "key": "number_plate",
+      "file": "number_plate.svg",
+      "group": "props",
+      "width": 70,
+      "height": 44
+    },
+    {
+      "key": "crosshair",
+      "file": "crosshair.svg",
+      "group": "props",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "key": "laser_bolt",
+      "file": "laser_bolt.svg",
+      "group": "props",
+      "width": 48,
+      "height": 14
+    },
+    {
+      "key": "crystal_blue",
+      "file": "crystal_blue.svg",
+      "group": "props",
+      "width": 60,
+      "height": 90
+    },
+    {
+      "key": "crystal_red",
+      "file": "crystal_red.svg",
+      "group": "props",
+      "width": 60,
+      "height": 90
+    },
+    {
+      "key": "crystal_green",
+      "file": "crystal_green.svg",
+      "group": "props",
+      "width": 60,
+      "height": 90
+    },
+    {
+      "key": "gem",
+      "file": "gem.svg",
+      "group": "props",
+      "width": 40,
+      "height": 40
+    },
+    {
+      "key": "gift_box",
+      "file": "gift_box.svg",
+      "group": "props",
+      "width": 44,
+      "height": 44
+    },
+    {
+      "key": "crystal_cluster",
+      "file": "crystal_cluster.svg",
+      "group": "props",
+      "width": 56,
+      "height": 48
+    },
+    {
+      "key": "gold_key",
+      "file": "gold_key.svg",
+      "group": "props",
+      "width": 48,
+      "height": 26
+    },
+    {
+      "key": "egg_token",
+      "file": "egg_token.svg",
+      "group": "props",
+      "width": 36,
+      "height": 46
+    },
+    {
+      "key": "computer_pad",
+      "file": "computer_pad.svg",
+      "group": "props",
+      "width": 50,
+      "height": 40
+    },
+    {
+      "key": "gate_closed",
+      "file": "gate_closed.svg",
+      "group": "platform",
+      "width": 240,
+      "height": 200
+    },
+    {
+      "key": "gate_open",
+      "file": "gate_open.svg",
+      "group": "platform",
+      "width": 240,
+      "height": 200
+    },
+    {
+      "key": "thought_bubble",
+      "file": "thought_bubble.svg",
+      "group": "platform",
+      "width": 120,
+      "height": 84
+    },
+    {
+      "key": "droplet",
+      "file": "droplet.svg",
+      "group": "platform",
+      "width": 36,
+      "height": 48
+    },
+    {
+      "key": "banana_peel",
+      "file": "banana_peel.svg",
+      "group": "platform",
+      "width": 44,
+      "height": 34
+    },
+    {
+      "key": "clothespin",
+      "file": "clothespin.svg",
+      "group": "platform",
+      "width": 44,
+      "height": 22
+    },
+    {
+      "key": "pacifier",
+      "file": "pacifier.svg",
+      "group": "platform",
+      "width": 40,
+      "height": 40
+    },
+    {
+      "key": "platform_plank",
+      "file": "platform_plank.svg",
+      "group": "platform",
+      "width": 128,
+      "height": 28
+    },
+    {
+      "key": "platform_ice",
+      "file": "platform_ice.svg",
+      "group": "platform",
+      "width": 128,
+      "height": 32
+    },
+    {
+      "key": "platform_temple",
+      "file": "platform_temple.svg",
+      "group": "platform",
+      "width": 128,
+      "height": 32
+    },
+    {
+      "key": "platform_jungle",
+      "file": "platform_jungle.svg",
+      "group": "platform",
+      "width": 128,
+      "height": 32
+    },
+    {
+      "key": "platform_mushroom",
+      "file": "platform_mushroom.svg",
+      "group": "platform",
+      "width": 128,
+      "height": 44
+    },
+    {
+      "key": "platform_girder",
+      "file": "platform_girder.svg",
+      "group": "platform",
+      "width": 128,
+      "height": 28
+    },
+    {
+      "key": "lava_pit",
+      "file": "lava_pit.svg",
+      "group": "platform",
+      "width": 128,
+      "height": 48
+    },
+    {
+      "key": "fire_statue_temple",
+      "file": "fire_statue_temple.svg",
+      "group": "platform",
+      "width": 90,
+      "height": 130
+    },
+    {
+      "key": "fire_statue_ice",
+      "file": "fire_statue_ice.svg",
+      "group": "platform",
+      "width": 90,
+      "height": 130
+    },
+    {
+      "key": "exit_door",
+      "file": "exit_door.svg",
+      "group": "platform",
+      "width": 110,
+      "height": 140
+    },
+    {
+      "key": "jetpack_pickup",
+      "file": "jetpack_pickup.svg",
+      "group": "platform",
+      "width": 56,
+      "height": 64
+    },
+    {
+      "key": "rope_bridge",
+      "file": "rope_bridge.svg",
+      "group": "platform",
+      "width": 128,
+      "height": 34
+    },
+    {
+      "key": "cobweb",
+      "file": "cobweb.svg",
+      "group": "platform",
+      "width": 120,
+      "height": 44
+    },
+    {
+      "key": "glass_tube",
+      "file": "glass_tube.svg",
+      "group": "platform",
+      "width": 90,
+      "height": 320
+    },
+    {
+      "key": "tube_token",
+      "file": "tube_token.svg",
+      "group": "platform",
+      "width": 60,
+      "height": 60
+    },
+    {
+      "key": "recycle_bin",
+      "file": "recycle_bin.svg",
+      "group": "platform",
+      "width": 100,
+      "height": 70
+    },
+    {
+      "key": "bg_starfield",
+      "file": "bg_starfield.svg",
+      "group": "backgrounds",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "key": "bg_cockpit",
+      "file": "bg_cockpit.svg",
+      "group": "backgrounds",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "key": "bg_moldar",
+      "file": "bg_moldar.svg",
+      "group": "backgrounds",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "key": "bg_ice",
+      "file": "bg_ice.svg",
+      "group": "backgrounds",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "key": "bg_temple",
+      "file": "bg_temple.svg",
+      "group": "backgrounds",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "key": "bg_jungle",
+      "file": "bg_jungle.svg",
+      "group": "backgrounds",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "key": "bg_city",
+      "file": "bg_city.svg",
+      "group": "backgrounds",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "key": "bg_chamber",
+      "file": "bg_chamber.svg",
+      "group": "backgrounds",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "key": "bg_console",
+      "file": "bg_console.svg",
+      "group": "backgrounds",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "key": "bg_title",
+      "file": "bg_title.svg",
+      "group": "backgrounds",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "key": "bg_prison",
+      "file": "bg_prison.svg",
+      "group": "backgrounds",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "key": "bg_oozed",
+      "file": "bg_oozed.svg",
+      "group": "backgrounds",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "key": "bg_bridge",
+      "file": "bg_bridge.svg",
+      "group": "backgrounds",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "key": "bg_map",
+      "file": "bg_map.svg",
+      "group": "backgrounds",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "key": "scroll_hud",
+      "file": "scroll_hud.svg",
+      "group": "ui",
+      "width": 220,
+      "height": 210
+    },
+    {
+      "key": "dialog_panel",
+      "file": "dialog_panel.svg",
+      "group": "ui",
+      "width": 940,
+      "height": 210
+    },
+    {
+      "key": "btn_green",
+      "file": "btn_green.svg",
+      "group": "ui",
+      "width": 300,
+      "height": 70
+    },
+    {
+      "key": "btn_red",
+      "file": "btn_red.svg",
+      "group": "ui",
+      "width": 300,
+      "height": 70
+    },
+    {
+      "key": "btn_blue",
+      "file": "btn_blue.svg",
+      "group": "ui",
+      "width": 300,
+      "height": 70
+    },
+    {
+      "key": "btn_gold",
+      "file": "btn_gold.svg",
+      "group": "ui",
+      "width": 300,
+      "height": 70
+    },
+    {
+      "key": "btn_purple",
+      "file": "btn_purple.svg",
+      "group": "ui",
+      "width": 300,
+      "height": 70
+    },
+    {
+      "key": "console_btn_off",
+      "file": "console_btn_off.svg",
+      "group": "ui",
+      "width": 250,
+      "height": 52
+    },
+    {
+      "key": "console_btn_on",
+      "file": "console_btn_on.svg",
+      "group": "ui",
+      "width": 250,
+      "height": 52
+    },
+    {
+      "key": "machine_btn_red",
+      "file": "machine_btn_red.svg",
+      "group": "ui",
+      "width": 110,
+      "height": 60
+    },
+    {
+      "key": "machine_btn_green",
+      "file": "machine_btn_green.svg",
+      "group": "ui",
+      "width": 110,
+      "height": 60
+    },
+    {
+      "key": "machine_btn_gold",
+      "file": "machine_btn_gold.svg",
+      "group": "ui",
+      "width": 110,
+      "height": 60
+    },
+    {
+      "key": "lamp_off",
+      "file": "lamp_off.svg",
+      "group": "ui",
+      "width": 36,
+      "height": 36
+    },
+    {
+      "key": "lamp_on",
+      "file": "lamp_on.svg",
+      "group": "ui",
+      "width": 36,
+      "height": 36
+    },
+    {
+      "key": "crystal_socket",
+      "file": "crystal_socket.svg",
+      "group": "ui",
+      "width": 70,
+      "height": 100
+    },
+    {
+      "key": "wood_sign",
+      "file": "wood_sign.svg",
+      "group": "ui",
+      "width": 260,
+      "height": 80
+    },
+    {
+      "key": "logo",
+      "file": "logo.svg",
+      "group": "ui",
+      "width": 760,
+      "height": 200
+    },
+    {
+      "key": "energy_meter",
+      "file": "energy_meter.svg",
+      "group": "ui",
+      "width": 400,
+      "height": 40
+    }
+  ]
+}
